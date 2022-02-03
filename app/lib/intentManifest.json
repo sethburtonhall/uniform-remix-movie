@@ -1,0 +1,43 @@
+{
+  "site": {
+    "sampleSize": 0,
+    "intents": [
+      {
+        "id": "action",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 50,
+            "value": {
+              "cs": false,
+              "expr": "action",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          }
+        ]
+      },
+      {
+        "id": "comedy",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 50,
+            "value": {
+              "cs": false,
+              "expr": "comedy",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          }
+        ]
+      }
+    ],
+    "enrichments": [],
+    "tests": []
+  }
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Poppins:wght@500&family=Rowdies:wght@300&family=Aladin&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply cursor-pointer;
+}
+
+@layer components {
+  .button--cta {
+    @apply inline-flex text-slate-50 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg font-serif;
+  }
+}
+.action-font {
+  font-family: 'Action', serif;
+}
+
+.action-font {
+  font-family: 'Comedy', cursive;
+}
