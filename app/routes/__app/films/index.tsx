@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => ({
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
   const title = url.searchParams.get('title');
-  return getFilms(title);
+  return getFilms(title, 10402);
 };
 
 export default function FilmsIndex() {
@@ -21,9 +21,9 @@ export default function FilmsIndex() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-5xl font-bold text-center mb-10 text-slate-100">
-        Cinematic Film Library
-      </h1>
+      {/* <h1 className="text-5xl font-bold text-center mb-10 text-slate-100">
+        Film Library
+      </h1> */}
       <Form method="get" className="my-10">
         <input
           ref={inputRef}
@@ -36,7 +36,7 @@ export default function FilmsIndex() {
           Search
         </button>
       </Form>
-      <div className="grid grid-cols-5 gap-6">
+      <div className="grid grid-cols-5 gap-8">
         {films.map((film: Film) => (
           <Link key={film.id} to={`/films/${film.id}`} prefetch="intent">
             <img
@@ -45,7 +45,9 @@ export default function FilmsIndex() {
               alt={film.title}
               className="hover:shadow-xl hover:scale-105 rounded-md transition ease-in-out delay-75 hover:-translate-y-1  duration-300"
             />
-            <h1 className="text-xl mt-6">{film.title}</h1>
+            <h1 className="text-xl text-slate-100 text-center mt-2">
+              {film.title}
+            </h1>
           </Link>
         ))}
       </div>

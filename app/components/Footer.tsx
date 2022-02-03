@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 body-font mt-12">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center text-slate-50 mb-4 md:mb-0">
           <svg

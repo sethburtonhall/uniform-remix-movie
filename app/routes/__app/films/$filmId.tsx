@@ -11,5 +11,9 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function Film() {
   const film = useLoaderData<Film>();
-  return <div className="container mx-auto">{film.title}</div>;
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-2xl text-slate-100">{film.title}</h1>
+    </div>
+  );
 }
