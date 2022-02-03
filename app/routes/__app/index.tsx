@@ -36,8 +36,6 @@ export const loader: LoaderFunction = async () => {
 };
 
 function HeroComponent({ movieOfTheWeek }: ComponentProps<HeroType>) {
-  console.log('movieOfTheWeek', movieOfTheWeek);
-
   return (
     <div className="container mx-auto flex flex-col xl:flex-row px-5 pt-12 md:py-24 font-serif">
       <div className="w-full md:mb-10 lg:mb-0">
@@ -94,7 +92,6 @@ const resolveRenderer: RenderComponentResolver = (component) => {
 
 export default function Index() {
   const composition = useLoaderData();
-  console.log(composition);
 
   return (
     <Composition data={composition} resolveRenderer={resolveRenderer}>

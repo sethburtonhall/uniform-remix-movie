@@ -7,7 +7,7 @@
         "signals": [
           {
             "type": "QS",
-            "freq": "visit",
+            "freq": "always",
             "scope": "visitor",
             "str": 50,
             "value": {
@@ -24,7 +24,7 @@
         "signals": [
           {
             "type": "QS",
-            "freq": "visit",
+            "freq": "always",
             "scope": "visitor",
             "str": 50,
             "value": {
@@ -38,6 +38,10 @@
       }
     ],
     "enrichments": [],
-    "tests": []
+    "tests": [
+      {
+        "name": "Film of the Week Test"
+      }
+    ]
   }
 }
