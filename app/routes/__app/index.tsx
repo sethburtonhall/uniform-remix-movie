@@ -35,7 +35,7 @@ export const loader: LoaderFunction = async () => {
   return composition;
 };
 
-function HeroComponent({ movieOfTheWeek }: ComponentProps<HeroType>) {
+function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
   return (
     <div className="container mx-auto flex flex-col xl:flex-row px-5 pt-12 md:py-24 font-serif">
       <div className="w-full md:mb-10 lg:mb-0">
@@ -44,13 +44,13 @@ function HeroComponent({ movieOfTheWeek }: ComponentProps<HeroType>) {
             className="rounded-md"
             controls
             poster={
-              movieOfTheWeek.fields.title === 'Action!'
+              personalizedHero.fields.title === 'Action!'
                 ? 'https://res.cloudinary.com/seth-hall/image/upload/v1643837423/atomic-blonde-stairwell-fight_s0uc1x.webp'
                 : 'https://res.cloudinary.com/seth-hall/image/upload/c_scale,w_1935/v1643836824/great-indie-comedies_vwmrz8.jpg'
             }
           >
             <source
-              src={movieOfTheWeek.fields.cloudinaryAsset[0].url}
+              src={personalizedHero.fields.cloudinaryAsset[0].url}
               type="video/mp4"
             />
           </video>
@@ -59,18 +59,18 @@ function HeroComponent({ movieOfTheWeek }: ComponentProps<HeroType>) {
       <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center mt-10">
         <h1
           className={`font-sans text-8xl text-slate-50 ${
-            movieOfTheWeek.fields.title === 'Action!'
+            personalizedHero.fields.title === 'Action!'
               ? 'text-sky-800 font-Action leading-tight'
               : 'text-fuchsia-600 font-Comedy leading-tight'
           }`}
         >
-          {movieOfTheWeek.fields.title}
+          {personalizedHero.fields.title}
         </h1>
         <h2 className="text-4xl text-slate-50 pl-14 mb-10">
           Film of the Week!
         </h2>
         <p className="mb-6 text-zinc-400">
-          {movieOfTheWeek.fields.description}
+          {personalizedHero.fields.description}
         </p>
         <div className="flex justify-center">
           <button className="button--cta">License this Film</button>
@@ -84,7 +84,7 @@ function HeroComponent({ movieOfTheWeek }: ComponentProps<HeroType>) {
 }
 
 const resolveRenderer: RenderComponentResolver = (component) => {
-  if (component.type === 'movieOfTheWeek') {
+  if (component.type === 'personalizedHero') {
     return HeroComponent;
   }
   return null;
