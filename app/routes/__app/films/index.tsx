@@ -61,12 +61,18 @@ export default function FilmsIndex() {
         <div>
           <button
             className={`text-xl ${
-              genreId === 'action' ? 'text-yellow-500' : 'text-fuchsia-500'
+              genreId === 'action'
+                ? 'text-yellow-500 tracking-wide font-Action'
+                : genreId === 'comedy'
+                ? 'text-fuchsia-500 tracking-wide text-2xl font-Comedy'
+                : ''
             }`}
           >
             {genreId === 'action'
               ? `# ${genreId.toUpperCase()}`
-              : `# ${genreId.toUpperCase()} `}
+              : genreId === 'comedy'
+              ? `# ${genreId.toUpperCase()}`
+              : ''}
           </button>
         </div>
       </div>

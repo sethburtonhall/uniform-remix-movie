@@ -1,7 +1,15 @@
 export type Film = {
   id: number;
   title: string;
+  backdrop_path: string;
   poster_path: string;
+  overview: string;
+  genres: [
+    {
+      id: number;
+      name: string;
+    }
+  ];
 };
 
 const baseUrl = 'https://api.themoviedb.org/3';

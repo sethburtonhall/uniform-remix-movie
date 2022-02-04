@@ -2,7 +2,7 @@ import { Link } from 'remix';
 
 export default function Header() {
   return (
-    <header className="text-slate-50 body-font">
+    <header className="text-slate-50 body-font mb-4">
       <div className="container mx-auto flex p-5 flex-row items-center">
         <Link
           to="/"

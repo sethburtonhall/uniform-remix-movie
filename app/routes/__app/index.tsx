@@ -41,10 +41,10 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
   const cookies = new Cookies();
-  const data = useLoaderData();
+  const { genreId } = useLoaderData();
 
   useEffect(() => {
-    cookies.set('genreId', `${data.genreId}`, { path: '/' });
+    cookies.set('genreId', `${genreId}`, { path: '/' });
   }, []);
 
   return (
