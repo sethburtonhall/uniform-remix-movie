@@ -7,11 +7,11 @@
         "signals": [
           {
             "type": "QS",
-            "freq": "always",
+            "freq": "visit",
             "scope": "visitor",
             "str": 50,
             "value": {
-              "cs": false,
+              "cs": true,
               "expr": "action",
               "type": "exact"
             },
@@ -24,11 +24,11 @@
         "signals": [
           {
             "type": "QS",
-            "freq": "always",
+            "freq": "visit",
             "scope": "visitor",
             "str": 50,
             "value": {
-              "cs": false,
+              "cs": true,
               "expr": "comedy",
               "type": "exact"
             },
