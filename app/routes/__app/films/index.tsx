@@ -1,6 +1,6 @@
-import { useRef } from 'react';
-import { Link, Form, useLoaderData, useTransition } from 'remix';
-import type { MetaFunction, LoaderFunction } from 'remix';
+import { useEffect, useRef } from 'react';
+import { Link, Form, useLoaderData, useActionData, useTransition } from 'remix';
+import type { MetaFunction, LoaderFunction, ActionFunction } from 'remix';
 import Cookies from 'universal-cookie';
 
 import { getFilms } from '~/api/films';
@@ -34,17 +34,38 @@ export const loader: LoaderFunction = async ({ request }) => {
   };
 };
 
+export let action: ActionFunction = async ({ request }) => {};
+
 export default function FilmsIndex() {
-  const { films } = useLoaderData();
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { genreId } = useLoaderData();
+  const { films, genreId } = useLoaderData();
+  let actionData = useActionData();
   const transition = useTransition();
+
+  let state: 'idle' | 'success' | 'error' | 'submitting' = transition.submission
+    ? 'submitting'
+    : actionData?.subscription
+    ? 'success'
+    : actionData?.error
+    ? 'error'
+    : 'idle';
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  let mounted = useRef<boolean>(false);
+
+  useEffect(() => {
+    if (state === 'idle' && mounted.current) {
+      inputRef.current?.select();
+    }
+
+    if (state === 'error') {
+      inputRef.current?.focus();
+    }
+
+    mounted.current = true;
+  }, [state]);
 
   return (
     <div className="container mx-auto">
-      {/* <h1 className="text-5xl font-bold text-center mb-10 text-slate-100">
-        Film Library
-      </h1> */}
       <div className="flex justify-between items-center">
         <Form method="get" className="my-10">
           <input
@@ -67,6 +88,10 @@ export default function FilmsIndex() {
                 ? 'text-fuchsia-500 tracking-wide text-2xl font-Comedy'
                 : ''
             }`}
+            onClick={() => {
+              getFilms();
+              inputRef.current?.focus();
+            }}
           >
             {genreId === 'action'
               ? `# ${genreId.toUpperCase()}`

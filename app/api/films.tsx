@@ -4,6 +4,7 @@ export type Film = {
   backdrop_path: string;
   poster_path: string;
   overview: string;
+  release_date: string;
   genres: [
     {
       id: number;

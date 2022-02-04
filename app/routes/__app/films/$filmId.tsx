@@ -1,5 +1,6 @@
 import { LoaderFunction, useLoaderData, Link, useParams } from 'remix';
 import invariant from 'tiny-invariant';
+import Moment from 'moment';
 
 import { getFilmById } from '~/api/films';
 import type { Film } from '~/api/films';
@@ -57,9 +58,14 @@ export default function Film() {
                   </span>
                 ))}
               </h2>
-              <h1 className="text-slate-100 text-3xl title-font font-medium mb-1">
-                {film.title}
-              </h1>
+              <div>
+                <h1 className="text-slate-100 text-3xl title-font font-medium mb-1">
+                  {film.title}
+                </h1>
+                <span className="mt-2">
+                  released: {Moment(film.release_date).format('MMM DD, YYYY')}
+                </span>
+              </div>
               <div className="flex mb-4">
                 <span className="flex items-center">
                   <svg
@@ -158,6 +164,7 @@ export default function Film() {
                   </a>
                 </span>
               </div>
+
               <p className="mb-6 font-serif">{film.overview}</p>
               <div className="flex">
                 <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
