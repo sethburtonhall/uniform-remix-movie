@@ -1,4 +1,4 @@
-import type { Film } from '~/api/films';
+import type { Film } from "~/api/films";
 
 type FilmBannerProps = {
   film: Film;

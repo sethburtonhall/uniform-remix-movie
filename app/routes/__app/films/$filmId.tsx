@@ -1,14 +1,14 @@
-import { LoaderFunction, useLoaderData, Link, useParams } from 'remix';
-import invariant from 'tiny-invariant';
-import Moment from 'moment';
+import { LoaderFunction, useLoaderData, Link, useParams } from "remix";
+import invariant from "tiny-invariant";
+import Moment from "moment";
 
-import { getFilmById } from '~/api/films';
-import type { Film } from '~/api/films';
+import { getFilmById } from "~/api/films";
+import type { Film } from "~/api/films";
 
-import FilmBanner from '~/components/FilmBanner';
+import FilmBanner from "~/components/FilmBanner";
 
 export const loader: LoaderFunction = async ({ params }) => {
-  invariant(params.filmId, 'Film id is required');
+  invariant(params.filmId, "Film id is required");
   const film = await getFilmById(params.filmId);
   return film;
 };
@@ -63,7 +63,7 @@ export default function Film() {
                   {film.title}
                 </h1>
                 <span className="mt-2">
-                  released: {Moment(film.release_date).format('MMM DD, YYYY')}
+                  released: {Moment(film.release_date).format("MMM DD, YYYY")}
                 </span>
               </div>
               <div className="mb-4 flex">

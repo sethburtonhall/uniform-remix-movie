@@ -1,11 +1,11 @@
-import { EnhancerBuilder } from '@uniformdev/canvas';
+import { EnhancerBuilder } from "@uniformdev/canvas";
 import {
   createContentfulEnhancer,
   ContentfulClientList,
   CANVAS_CONTENTFUL_PARAMETER_TYPES,
-} from '@uniformdev/canvas-contentful';
+} from "@uniformdev/canvas-contentful";
 
-import { createClient as ContentfulClient } from 'contentful';
+import { createClient as ContentfulClient } from "contentful";
 
 const contentfulClient = ContentfulClient({
   space: process.env.CONTENTFUL_SPACE_ID,

@@ -6,26 +6,26 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from 'remix';
-import type { MetaFunction } from 'remix';
+} from "remix";
+import type { MetaFunction } from "remix";
 
-import { UniformTracker } from '@uniformdev/optimize-tracker-react';
-import { createDefaultTracker } from '@uniformdev/optimize-tracker-browser';
-import intentManifest from './lib/intentManifest.json';
+import { UniformTracker } from "@uniformdev/optimize-tracker-react";
+import { createDefaultTracker } from "@uniformdev/optimize-tracker-browser";
+import intentManifest from "./lib/intentManifest.json";
 
-import styles from './styles/app.css';
+import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => {
   return {
-    title: 'Cinematic',
-    description: 'A film library for cinematic enthusiasts.',
+    title: "Cinematic",
+    description: "A film library for cinematic enthusiasts.",
   };
 };
 
 export const links: LinksFunction = () => {
   return [
     {
-      rel: 'stylesheet',
+      rel: "stylesheet",
       href: styles,
     },
   ];
@@ -52,7 +52,7 @@ export default function App({ scoring }: { scoring: any }) {
           <Outlet />
           <ScrollRestoration />
           <Scripts />
-          {process.env.NODE_ENV === 'development' && <LiveReload />}
+          {process.env.NODE_ENV === "development" && <LiveReload />}
         </body>
       </html>
     </UniformTracker>

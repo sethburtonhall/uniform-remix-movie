@@ -1,6 +1,6 @@
-import { Outlet } from 'remix';
+import { Outlet } from "remix";
 
-import { Header, Footer } from '../components';
+import { Header, Footer } from "../components";
 
 export default function Index() {
   return (
