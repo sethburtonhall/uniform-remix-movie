@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import { useLoaderData } from 'remix';
 import type { LoaderFunction } from 'remix';
-
+import Cookies from 'universal-cookie';
 import { CanvasClient, enhance } from '@uniformdev/canvas';
 import { Composition, Slot } from '@uniformdev/canvas-react';
 import type {
@@ -16,7 +17,7 @@ type HeroType = {
   name: string;
 };
 
-export const loader: LoaderFunction = async () => {
+export const loader: LoaderFunction = async ({ request }) => {
   const canvasClient = new CanvasClient({
     apiKey: process.env.UNIFORM_API_KEY,
     projectId: process.env.UNIFORM_PROJECT_ID,
@@ -32,10 +33,20 @@ export const loader: LoaderFunction = async () => {
     context: {},
   });
 
-  return composition;
+  const url = new URL(request.url);
+  const genreId = url.searchParams.get('utm_campaign');
+
+  return { ...composition, genreId };
 };
 
 function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
+  const cookies = new Cookies();
+  const data = useLoaderData();
+
+  useEffect(() => {
+    cookies.set('genreId', `${data.genreId}`, { path: '/' });
+  }, []);
+
   return (
     <div className="container mx-auto flex flex-col xl:flex-row px-5 pt-12 md:py-24 font-serif">
       <div className="w-full md:mb-10 lg:mb-0">
@@ -60,14 +71,16 @@ function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
         <h1
           className={`font-sans text-8xl text-slate-50 ${
             personalizedHero.fields.title === 'Action!'
-              ? 'text-sky-800 font-Action leading-tight'
-              : 'text-fuchsia-600 font-Comedy leading-tight'
+              ? 'text-yellow-500 -rotate-2 font-Action leading-tight'
+              : 'text-fuchsia-500 font-Comedy leading-tight'
           }`}
         >
           {personalizedHero.fields.title}
         </h1>
         <h2 className="text-4xl text-slate-50 pl-14 mb-10">
-          Film of the Week!
+          {personalizedHero.fields.title === 'Action!'
+            ? 'Film of the Week!'
+            : 'of the Week!'}
         </h2>
         <p className="mb-6 text-zinc-400">
           {personalizedHero.fields.description}

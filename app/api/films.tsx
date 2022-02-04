@@ -6,10 +6,11 @@ export type Film = {
 
 const baseUrl = 'https://api.themoviedb.org/3';
 
-export async function getFilms(title?: string | null, genre_id?: number) {
+// Get all films with optional title and genreId
+export async function getFilms(title?: string | null, genreId?: number) {
   const response = await fetch(
     `${baseUrl}/discover/movie?api_key=${process.env.TMDB_API_KEY}&page=1${
-      genre_id && `&with_genres=${genre_id}`
+      genreId && `&with_genres=${genreId}`
     }`,
     {
       method: 'GET',
@@ -30,6 +31,7 @@ export async function getFilms(title?: string | null, genre_id?: number) {
   });
 }
 
+// Get film by id
 export async function getFilmById(id: string) {
   const response = await fetch(
     `${baseUrl}/movie/${id}?api_key=${process.env.TMDB_API_KEY}`

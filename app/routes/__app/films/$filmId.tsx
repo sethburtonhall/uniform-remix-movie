@@ -1,7 +1,8 @@
 import { LoaderFunction, useLoaderData, useParams } from 'remix';
+import invariant from 'tiny-invariant';
+
 import { getFilmById } from '~/api/films';
 import type { Film } from '~/api/films';
-import invariant from 'tiny-invariant';
 
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.filmId, 'Film id is required');
