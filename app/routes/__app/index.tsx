@@ -48,9 +48,9 @@ function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
   }, []);
 
   return (
-    <div className="container mx-auto flex flex-col xl:flex-row px-5 pt-12 md:py-24 font-serif">
+    <div className="container mx-auto flex flex-col px-5 pt-12 font-serif md:py-24 xl:flex-row">
       <div className="w-full md:mb-10 lg:mb-0">
-        <div className="aspect-w-16 aspect-h-9 mb-4 md:mb-2 lg:mb-0 w-full">
+        <div className="aspect-w-16 aspect-h-9 mb-4 w-full md:mb-2 lg:mb-0">
           <video
             className="rounded-md"
             controls
@@ -67,17 +67,17 @@ function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
           </video>
         </div>
       </div>
-      <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center mt-10">
+      <div className="mt-10 flex flex-col items-center text-center md:w-1/2 md:items-start md:pl-16 md:text-left lg:flex-grow lg:pl-24">
         <h1
           className={`font-sans text-8xl text-slate-50 ${
             personalizedHero.fields.title === 'Action!'
-              ? 'text-yellow-500 -rotate-2 font-Action leading-tight'
-              : 'text-fuchsia-500 font-Comedy leading-tight'
+              ? 'font-Action -rotate-2 leading-tight text-yellow-500'
+              : 'font-Comedy leading-tight text-fuchsia-500'
           }`}
         >
           {personalizedHero.fields.title}
         </h1>
-        <h2 className="text-4xl text-slate-50 pl-14 mb-10">
+        <h2 className="mb-10 pl-14 text-4xl text-slate-50">
           {personalizedHero.fields.title === 'Action!'
             ? 'Film of the Week!'
             : 'of the Week!'}
@@ -87,7 +87,7 @@ function HeroComponent({ personalizedHero }: ComponentProps<HeroType>) {
         </p>
         <div className="flex justify-center">
           <button className="button--cta">License this Film</button>
-          <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+          <button className="ml-4 inline-flex rounded border-0 bg-gray-100 py-2 px-6 text-lg text-gray-700 hover:bg-gray-200 focus:outline-none">
             Read More
           </button>
         </div>

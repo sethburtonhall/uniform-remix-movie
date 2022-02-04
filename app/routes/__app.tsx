@@ -4,7 +4,7 @@ import { Header, Footer } from '../components';
 
 export default function Index() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-900">
+    <div className="flex min-h-screen flex-col bg-slate-900">
       <Header />
       <Outlet />
       <Footer />

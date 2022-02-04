@@ -66,14 +66,14 @@ export default function FilmsIndex() {
 
   return (
     <div className="container mx-auto">
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <Form method="get" className="my-10">
           <input
             ref={inputRef}
             type="text"
             name="title"
             placeholder="Search by title..."
-            className="rounded-md p-2 mr-4"
+            className="mr-4 rounded-md p-2"
           />
           <button type="submit" className="button--cta">
             {transition.submission ? 'Searching...' : 'Search'}
@@ -83,9 +83,9 @@ export default function FilmsIndex() {
           <button
             className={`text-xl ${
               genreId === 'action'
-                ? 'text-yellow-500 tracking-wide font-Action'
+                ? 'font-Action tracking-wide text-yellow-500'
                 : genreId === 'comedy'
-                ? 'text-fuchsia-500 tracking-wide text-2xl font-Comedy'
+                ? 'font-Comedy text-2xl tracking-wide text-fuchsia-500'
                 : ''
             }`}
             onClick={() => {
@@ -108,9 +108,9 @@ export default function FilmsIndex() {
               key={film.id}
               src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`}
               alt={film.title}
-              className="hover:shadow-xl hover:scale-105 rounded-md transition ease-in-out delay-75 hover:-translate-y-1  duration-300"
+              className="rounded-md transition delay-75 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105  hover:shadow-xl"
             />
-            <h1 className="text-xl text-slate-100 text-center mt-2">
+            <h1 className="mt-2 text-center text-xl text-slate-100">
               {film.title}
             </h1>
           </Link>

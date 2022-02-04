@@ -7,10 +7,10 @@ type FilmBannerProps = {
 export default function FilmBanner({ film }: FilmBannerProps) {
   return (
     <div>
-      <div className="w-full h-96 overflow-hidden relative">
-        <div className="container w-full h-full flex flex-col absolute justify-end items-start">
+      <div className="relative h-96 w-full overflow-hidden">
+        <div className="container absolute flex h-full w-full flex-col items-start justify-end">
           <div className="bg-slate-700/60 p-5">
-            <h1 className="text-5xl font-bold text-center text-slate-100">
+            <h1 className="text-center text-5xl font-bold text-slate-100">
               {film.title}
             </h1>
           </div>
@@ -20,7 +20,7 @@ export default function FilmBanner({ film }: FilmBannerProps) {
           <img
             src={`https://image.tmdb.org/t/p/original/${film.backdrop_path}`}
             alt="Film Banner Image"
-            className="w-full h-auto -mt-[100px]"
+            className="-mt-[100px] h-auto w-full"
           />
         </div>
       </div>

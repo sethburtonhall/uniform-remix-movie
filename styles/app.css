@@ -10,7 +10,7 @@ a {
 
 @layer components {
   .button--cta {
-    @apply inline-flex text-slate-50 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg font-serif;
+    @apply inline-flex rounded border-0 bg-indigo-500 py-2 px-6 font-serif text-lg text-slate-50 hover:bg-indigo-600 focus:outline-none;
   }
 }
 .action-font {
