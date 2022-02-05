@@ -13,7 +13,7 @@ export type Film = {
   ];
 };
 
-const baseUrl = "https://api.themoviedb.org/3";
+const baseUrl = 'https://api.themoviedb.org/3';
 
 // Get all films with optional title and genreId
 export async function getFilms(title?: string | null, genreId?: number) {
@@ -22,10 +22,10 @@ export async function getFilms(title?: string | null, genreId?: number) {
       genreId && `&with_genres=${genreId}`
     }`,
     {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
       },
     }
   );

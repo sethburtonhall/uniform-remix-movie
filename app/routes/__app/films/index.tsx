@@ -1,28 +1,28 @@
-import { useEffect, useRef } from "react";
-import { Link, Form, useLoaderData, useActionData, useTransition } from "remix";
-import type { MetaFunction, LoaderFunction, ActionFunction } from "remix";
-import Cookies from "universal-cookie";
+import { useEffect, useRef } from 'react';
+import { Link, Form, useLoaderData, useActionData, useTransition } from 'remix';
+import type { MetaFunction, LoaderFunction, ActionFunction } from 'remix';
+import Cookies from 'universal-cookie';
 
-import { getFilms } from "~/api/films";
-import type { Film } from "~/api/films";
+import { getFilms } from '~/api/films';
+import type { Film } from '~/api/films';
 
 export const meta: MetaFunction = () => ({
-  title: "Films | Cinematic",
-  description: "A film library for cinematic enthusiasts.",
+  title: 'Films | Cinematic',
+  description: 'A film library for cinematic enthusiasts.',
 });
 
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
-  const title = url.searchParams.get("title");
-  const cookies = new Cookies(request.headers.get("cookie"));
-  const genreId = cookies.get("genreId");
+  const title = url.searchParams.get('title');
+  const cookies = new Cookies(request.headers.get('cookie'));
+  const genreId = cookies.get('genreId');
 
-  if (genreId === "action") {
+  if (genreId === 'action') {
     return {
       films: await getFilms(title, 28),
       genreId,
     };
-  } else if (genreId === "comedy") {
+  } else if (genreId === 'comedy') {
     return {
       films: await getFilms(title, 35),
       genreId,
@@ -41,23 +41,23 @@ export default function FilmsIndex() {
   let actionData = useActionData();
   const transition = useTransition();
 
-  let state: "idle" | "success" | "error" | "submitting" = transition.submission
-    ? "submitting"
+  let state: 'idle' | 'success' | 'error' | 'submitting' = transition.submission
+    ? 'submitting'
     : actionData?.subscription
-    ? "success"
+    ? 'success'
     : actionData?.error
-    ? "error"
-    : "idle";
+    ? 'error'
+    : 'idle';
 
   const inputRef = useRef<HTMLInputElement>(null);
   let mounted = useRef<boolean>(false);
 
   useEffect(() => {
-    if (state === "idle" && mounted.current) {
+    if (state === 'idle' && mounted.current) {
       inputRef.current?.select();
     }
 
-    if (state === "error") {
+    if (state === 'error') {
       inputRef.current?.focus();
     }
 
@@ -76,28 +76,24 @@ export default function FilmsIndex() {
             className="mr-4 rounded-md p-2"
           />
           <button type="submit" className="button--cta">
-            {transition.submission ? "Searching..." : "Search"}
+            {transition.submission ? 'Searching...' : 'Search'}
           </button>
         </Form>
         <div>
           <button
             className={`text-xl ${
-              genreId === "action"
-                ? "font-Action tracking-wide text-yellow-500"
-                : genreId === "comedy"
-                ? "font-Comedy text-2xl tracking-wide text-fuchsia-500"
-                : ""
+              genreId === 'action'
+                ? 'font-Action tracking-wide text-yellow-500'
+                : genreId === 'comedy'
+                ? 'font-Comedy text-2xl tracking-wide text-fuchsia-500'
+                : ''
             }`}
-            onClick={() => {
-              getFilms();
-              inputRef.current?.focus();
-            }}
           >
-            {genreId === "action"
+            {genreId === 'action'
               ? `# ${genreId.toUpperCase()}`
-              : genreId === "comedy"
+              : genreId === 'comedy'
               ? `# ${genreId.toUpperCase()}`
-              : ""}
+              : ''}
           </button>
         </div>
       </div>
