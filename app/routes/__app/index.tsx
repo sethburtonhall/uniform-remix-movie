@@ -2,44 +2,79 @@ import { useEffect } from 'react';
 import { useLoaderData } from 'remix';
 import type { LoaderFunction } from 'remix';
 import Cookies from 'universal-cookie';
-import { CanvasClient, enhance } from '@uniformdev/canvas';
+import {
+  RootComponentInstance,
+  CANVAS_DRAFT_STATE,
+  CANVAS_PUBLISHED_STATE,
+  CanvasClientError,
+  enhance,
+} from '@uniformdev/canvas';
 import { Composition, Slot } from '@uniformdev/canvas-react';
 import type {
   RenderComponentResolver,
   ComponentProps,
 } from '@uniformdev/canvas-react';
 
+import { canvasClient } from '~/services/uniformCanvas.server';
 import { enhancers } from '../../enhancers';
 
 type HeroSlots = 'heroSlot';
 
 type HeroType = {
-  name: string;
+  fields: {
+    title: string;
+    description: string;
+    cloudinaryAsset: [{ url: string }];
+  };
 };
 
-export const loader: LoaderFunction = async ({ request }) => {
-  const canvasClient = new CanvasClient({
-    apiKey: process.env.UNIFORM_API_KEY,
-    projectId: process.env.UNIFORM_PROJECT_ID,
-  });
-
-  const { composition } = await canvasClient.getCompositionBySlug({
-    slug: '/',
-  });
-
-  await enhance({
-    composition,
-    enhancers,
-    context: {},
-  });
-
-  const url = new URL(request.url);
-  const genreId = url.searchParams.get('utm_campaign');
-
-  return { ...composition, genreId };
+type CatchallData = {
+  composition: RootComponentInstance;
+  genreId: string | null;
+  preview: boolean;
 };
 
-function Hero({ personalizedHero }: ComponentProps<HeroType>) {
+export const loader: LoaderFunction = async ({
+  request,
+  params,
+}): Promise<CatchallData> => {
+  const slug = params['*'];
+  const slugString = Array.isArray(slug) ? slug.join('/') : slug;
+  const preview = false;
+
+  try {
+    const { composition } = await canvasClient.getCompositionBySlug({
+      slug: slugString ? `/${slugString}` : '/',
+      state:
+        process.env.NODE_ENV === 'development' || preview
+          ? CANVAS_DRAFT_STATE
+          : CANVAS_PUBLISHED_STATE,
+    });
+
+    await enhance({
+      composition,
+      enhancers,
+      context: {},
+    });
+
+    const url = new URL(request.url);
+    const genreId = url.searchParams.get('utm_campaign');
+
+    return {
+      composition,
+      genreId,
+      preview: Boolean(preview),
+    };
+  } catch (e) {
+    if (e instanceof CanvasClientError && e.statusCode === 404) {
+      throw new Response('Composition not found', { status: 404 });
+    }
+
+    throw e;
+  }
+};
+
+function Hero({ personalizedHero }: { personalizedHero: HeroType }) {
   const cookies = new Cookies();
   const { genreId } = useLoaderData();
 
@@ -56,8 +91,8 @@ function Hero({ personalizedHero }: ComponentProps<HeroType>) {
             controls
             poster={
               personalizedHero.fields.title === 'Action!'
-                ? 'https://res.cloudinary.com/seth-hall/image/upload/v1643837423/atomic-blonde-stairwell-fight_s0uc1x.webp'
-                : 'https://res.cloudinary.com/seth-hall/image/upload/c_scale,w_1935/v1643836824/great-indie-comedies_vwmrz8.jpg'
+                ? 'https://res.cloudinary.com/seth-hall/image/upload/v1643837423/Uniform/Uniform%20Movie/atomic-blonde-stairwell-fight_s0uc1x.webp'
+                : 'https://res.cloudinary.com/seth-hall/image/upload/v1643836824/Uniform/Uniform%20Movie/great-indie-comedies_vwmrz8.jpg'
             }
           >
             <source
@@ -71,7 +106,7 @@ function Hero({ personalizedHero }: ComponentProps<HeroType>) {
         <h1
           className={`font-sans text-8xl text-slate-50 ${
             personalizedHero.fields.title === 'Action!'
-              ? 'font-Action -rotate-2 leading-tight text-yellow-500'
+              ? '-rotate-2 font-Action leading-tight text-yellow-500'
               : 'font-Comedy leading-tight text-fuchsia-500'
           }`}
         >
@@ -98,7 +133,6 @@ function Hero({ personalizedHero }: ComponentProps<HeroType>) {
 
 function FeaturedArticles({ featuredArticle }) {
   const { title, description, featuredImage } = featuredArticle.fields;
-  // console.log('featured', featuredArticle, 'featured Image', featuredImage);
 
   function truncateString(str: string, num: number) {
     if (str.length <= num) {
@@ -134,7 +168,7 @@ const resolveRenderer: RenderComponentResolver = (component) => {
 };
 
 export default function Index() {
-  const composition = useLoaderData();
+  const { composition } = useLoaderData<CatchallData>();
 
   return (
     <Composition data={composition} resolveRenderer={resolveRenderer}>

@@ -29,7 +29,7 @@ export const loader: LoaderFunction = async ({ request }) => {
     };
   }
   return {
-    films: await getFilms(title, 10402),
+    films: await getFilms(title),
     genreId,
   };
 };
