@@ -20,16 +20,6 @@ import { enhancers } from '../../enhancers';
 
 type HeroSlots = 'heroSlot';
 
-type HeroType = ComponentProps<{
-  personalizedHero: {
-    fields: {
-      title: string;
-      description: string;
-      cloudinaryAsset: [{ url: string }];
-    };
-  };
-}>;
-
 type CatchallData = {
   composition: RootComponentInstance;
   genreId: string | null;
@@ -76,7 +66,10 @@ export const loader: LoaderFunction = async ({
   }
 };
 
-function Hero({ personalizedHero, component }: HeroType) {
+function Hero({ component }: ComponentProps) {
+  const { title, description, cloudinaryAsset } =
+    component?.parameters?.personalizedHero?.value?.fields ?? {};
+  const posterImage = component?.parameters?.posterImage.value[0].url;
   const cookies = new Cookies();
   const { genreId } = useLoaderData();
   console.log('component', component);
@@ -89,36 +82,25 @@ function Hero({ personalizedHero, component }: HeroType) {
     <div className="container mx-auto flex flex-col px-5 pt-12 font-serif md:py-24 xl:flex-row">
       <div className="w-full md:mb-10 lg:mb-0">
         <div className="aspect-w-16 aspect-h-9 mb-4 w-full md:mb-2 lg:mb-0">
-          <video
-            className="rounded-md"
-            controls
-            poster={component?.parameters?.posterImage?.value[0].url}
-          >
-            <source
-              src={personalizedHero.fields.cloudinaryAsset[0].url}
-              type="video/mp4"
-            />
+          <video className="rounded-md" controls poster={posterImage}>
+            <source src={cloudinaryAsset[0].url} type="video/mp4" />
           </video>
         </div>
       </div>
       <div className="mt-10 flex flex-col items-center text-center md:w-1/2 md:items-start md:pl-16 md:text-left lg:flex-grow lg:pl-24">
         <h1
           className={`font-sans text-8xl text-slate-50 ${
-            personalizedHero.fields.title === 'Action!'
+            title === 'Action!'
               ? '-rotate-2 font-Action leading-tight text-yellow-500'
               : 'font-Comedy leading-tight text-fuchsia-500'
           }`}
         >
-          {personalizedHero.fields.title}
+          {title}
         </h1>
         <h2 className="mb-10 pl-14 text-4xl text-slate-50">
-          {personalizedHero.fields.title === 'Action!'
-            ? 'Film of the Week!'
-            : 'of the Week!'}
+          {title === 'Action!' ? 'Film of the Week!' : 'of the Week!'}
         </h2>
-        <p className="mb-6 text-zinc-400">
-          {personalizedHero.fields.description}
-        </p>
+        <p className="mb-6 text-zinc-400">{description}</p>
         <div className="flex justify-center">
           <button className="button--cta">License this Film</button>
           <button className="ml-4 inline-flex rounded border-0 bg-gray-100 py-2 px-6 text-lg text-gray-700 hover:bg-gray-200 focus:outline-none">
@@ -130,8 +112,9 @@ function Hero({ personalizedHero, component }: HeroType) {
   );
 }
 
-function FeaturedArticles({ featuredArticle }) {
-  const { title, description, featuredImage } = featuredArticle.fields;
+function FeaturedArticles({ component }: ComponentProps) {
+  const { title, description, featuredImage } =
+    component?.parameters?.featuredArticle?.value?.fields ?? {};
 
   function truncateString(str: string, num: number) {
     if (str.length <= num) {
