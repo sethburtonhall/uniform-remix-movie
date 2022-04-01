@@ -1,0 +1,18 @@
+id: featuredArticle
+name: Featured Article
+icon: screen
+parameters:
+  - id: featuredArticle
+    name: Featured Article
+    type: contentfulEntry
+    typeConfig:
+      source: default
+      allowedContentTypes:
+        post:
+          id: post
+          name: Post
+slots: []
+titleParameter: ''
+canBeComposition: false
+created: '2022-03-31T18:49:26.726272+00:00'
+updated: '2022-03-31T18:49:26.726272+00:00'

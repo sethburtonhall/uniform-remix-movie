@@ -1,0 +1,23 @@
+id: hero
+name: Page
+icon: screen
+parameters: []
+slots:
+  - id: heroSlot
+    name: Hero Slot
+    maxComponents: 2
+    allowedComponents:
+      - $personalization
+      - personalizedHero
+    inheritAllowedComponents: false
+  - id: featuredArticlesGroupSlot
+    name: Featured Articles Group Slot
+    maxComponents: 3
+    allowedComponents:
+      - featuredArticle
+      - $personalization
+    inheritAllowedComponents: false
+titleParameter: ''
+canBeComposition: true
+created: '2022-03-31T18:49:26.611275+00:00'
+updated: '2022-03-31T18:49:26.611275+00:00'

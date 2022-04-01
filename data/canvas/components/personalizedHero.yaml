@@ -1,0 +1,29 @@
+id: personalizedHero
+name: Personalized Hero
+icon: screen
+parameters:
+  - id: posterImage
+    name: Poster Image
+    type: cloudinary-parameter
+    typeConfig:
+      ratio: '16:9'
+      widths: 300,500
+      defaultoptions: q_auto,f_auto
+      croppingTemplates:
+        - label: Label
+          width: ''
+          aspectRatio: ''
+  - id: personalizedHero
+    name: Personalized Hero
+    type: contentfulEntry
+    typeConfig:
+      source: default
+      allowedContentTypes:
+        film:
+          id: film
+          name: Film of the Week
+slots: []
+titleParameter: ''
+canBeComposition: false
+created: '2022-03-31T18:49:25.998502+00:00'
+updated: '2022-03-31T20:34:28.287684+00:00'

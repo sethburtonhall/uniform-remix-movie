@@ -1,0 +1,1820 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "film",
+        "type": "ContentType",
+        "createdAt": "2022-02-01T19:08:02.837Z",
+        "updatedAt": "2022-02-02T19:52:56.079Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2022-02-02T19:52:56.079Z",
+        "firstPublishedAt": "2022-02-01T19:08:03.033Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Film of the Week",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cloudinaryAsset",
+          "name": "CloudinaryAsset",
+          "type": "Object",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "unfrmOptIntentTag",
+          "name": "Intent Tags",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2022-02-03T16:43:03.151Z",
+        "updatedAt": "2022-02-03T19:41:47.703Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "publishedAt": "2022-02-03T19:41:47.703Z",
+        "firstPublishedAt": "2022-02-03T16:43:03.483Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 13,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "components",
+          "name": "Components",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "homepageHero",
+        "type": "ContentType",
+        "createdAt": "2022-02-03T19:28:42.769Z",
+        "updatedAt": "2022-02-03T19:46:06.975Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2022-02-03T19:46:06.975Z",
+        "firstPublishedAt": "2022-02-03T19:28:43.055Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        }
+      },
+      "displayField": "personalizedHeroName",
+      "name": "Personalized Hero",
+      "description": "",
+      "fields": [
+        {
+          "id": "personalizedHeroName",
+          "name": "Personalized Hero Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heroOptions",
+          "name": "Hero Options",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2022-02-05T02:32:58.299Z",
+        "updatedAt": "2022-02-05T02:35:07.541Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-02-05T02:35:07.541Z",
+        "firstPublishedAt": "2022-02-05T02:32:58.520Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Post",
+      "description": "This is a blog post",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featuredImage",
+          "name": "Featured Image",
+          "type": "Object",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code"
+              ],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "vyba6ssmqoqt",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 16,
+        "createdAt": "2022-02-01T19:08:03.077Z",
+        "createdBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-02-02T19:52:56.470Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "film",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cloudinaryAsset",
+          "widgetId": "zjcnWgBknf9zB7IM9HZjE",
+          "widgetNamespace": "app"
+        },
+        {
+          "fieldId": "unfrmOptIntentTag",
+          "widgetId": "1BeY7xDfJfvD5El9ymsOZF",
+          "widgetNamespace": "app"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "vyba6ssmqoqt",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 26,
+        "createdAt": "2022-02-03T16:43:03.589Z",
+        "createdBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-02-03T19:41:48.063Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "components",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "vyba6ssmqoqt",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 14,
+        "createdAt": "2022-02-03T19:28:43.131Z",
+        "createdBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-02-03T19:46:07.253Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "homepageHero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "personalizedHeroName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heroOptions",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "vyba6ssmqoqt",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2022-02-05T02:32:58.600Z",
+        "createdBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-02-05T02:35:08.079Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featuredImage",
+          "widgetId": "zjcnWgBknf9zB7IM9HZjE",
+          "widgetNamespace": "app"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "5YC1G71B9xwDwrFKdleCYz",
+        "type": "Entry",
+        "createdAt": "2022-02-01T20:17:46.555Z",
+        "updatedAt": "2022-02-03T20:43:58.495Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2022-02-03T20:43:58.495Z",
+        "firstPublishedAt": "2022-02-01T20:18:03.621Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 13,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "film"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Action!"
+        },
+        "cloudinaryAsset": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/video/upload/f_auto/q_auto/v1623764494/samples/sea-turtle.mp4",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 27932506,
+              "width": 1920,
+              "format": "mp4",
+              "height": 1080,
+              "version": 1623764494,
+              "duration": 15.215215,
+              "metadata": [
+              ],
+              "public_id": "samples/sea-turtle",
+              "created_at": "2021-06-15T13:41:34Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/video/upload/f_auto/q_auto/v1623764494/samples/sea-turtle.mp4",
+              "original_url": "http://res.cloudinary.com/seth-hall/video/upload/v1623764494/samples/sea-turtle.mp4",
+              "resource_type": "video",
+              "raw_transformation": "f_auto/q_auto",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/video/upload/v1623764494/samples/sea-turtle.mp4"
+            }
+          ]
+        },
+        "unfrmOptIntentTag": {
+          "en-US": {
+            "intents": {
+              "action": {
+                "str": 50,
+                "threshold": 50
+              }
+            }
+          }
+        },
+        "description": {
+          "en-US": "You're gonna need a bigger boat. There's no place like home. Frankly, my dear, I don't give a damn. Toto, I've a feeling we're not in Kansas anymore. To infinity and beyond! Here's looking at you, kid."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "59NT0xmpfzbtOyJgFOscad",
+        "type": "Entry",
+        "createdAt": "2022-02-02T14:07:07.785Z",
+        "updatedAt": "2022-02-03T20:44:10.814Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2022-02-03T20:44:10.814Z",
+        "firstPublishedAt": "2022-02-02T14:07:39.762Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 11,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "film"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "#Comedy"
+        },
+        "cloudinaryAsset": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/video/upload/f_auto/q_auto/v1623764495/samples/elephants.mp4",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 38855178,
+              "width": 1920,
+              "format": "mp4",
+              "height": 1080,
+              "version": 1623764495,
+              "duration": 48.515182,
+              "metadata": [
+              ],
+              "public_id": "samples/elephants",
+              "created_at": "2021-06-15T13:41:35Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/video/upload/f_auto/q_auto/v1623764495/samples/elephants.mp4",
+              "original_url": "http://res.cloudinary.com/seth-hall/video/upload/v1623764495/samples/elephants.mp4",
+              "resource_type": "video",
+              "raw_transformation": "f_auto/q_auto",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/video/upload/v1623764495/samples/elephants.mp4"
+            }
+          ]
+        },
+        "unfrmOptIntentTag": {
+          "en-US": {
+            "intents": {
+              "comedy": {
+                "str": 50,
+                "threshold": 50
+              }
+            }
+          }
+        },
+        "description": {
+          "en-US": "I'm also just a girl, standing in front of a boy, asking him to love her. The Dude abides. Here's Johnny! Just when I thought I was out, they pull me back in. Elementary, my dear Watson. Gentlemen, you can't fight in here! This is the war room! I'm the king of the world!"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "3EuEb1ayILKvqs66qQuhQV",
+        "type": "Entry",
+        "createdAt": "2022-02-03T16:43:13.360Z",
+        "updatedAt": "2022-02-03T19:42:18.967Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2022-02-03T19:42:18.967Z",
+        "firstPublishedAt": "2022-02-03T16:43:19.665Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home Page"
+        },
+        "slug": {
+          "en-US": "/"
+        },
+        "components": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "75djSdsFZTBxX67b1yhF6a"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "75djSdsFZTBxX67b1yhF6a",
+        "type": "Entry",
+        "createdAt": "2022-02-03T19:34:51.494Z",
+        "updatedAt": "2022-02-03T21:19:16.484Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2022-02-03T21:19:16.484Z",
+        "firstPublishedAt": "2022-02-03T19:35:25.311Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "homepageHero"
+          }
+        }
+      },
+      "fields": {
+        "personalizedHeroName": {
+          "en-US": "Homepage Hero"
+        },
+        "heroOptions": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5YC1G71B9xwDwrFKdleCYz"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "59NT0xmpfzbtOyJgFOscad"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "5JQe8dxpwnPRkLjNa7D7Fg",
+        "type": "Entry",
+        "createdAt": "2022-02-05T02:35:22.021Z",
+        "updatedAt": "2022-03-28T20:25:08.034Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2022-03-28T20:25:08.034Z",
+        "firstPublishedAt": "2022-02-05T02:36:46.984Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Our Top 5 Comedies!"
+        },
+        "featuredImage": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644028666/Uniform/Uniform%20Movie/group-people-watching-funny-video-laughing-cartoon_1284-33366_qq1oed.jpg",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 67400,
+              "width": 626,
+              "format": "jpg",
+              "height": 417,
+              "version": 1644028666,
+              "duration": null,
+              "metadata": [
+              ],
+              "public_id": "Uniform/Uniform Movie/group-people-watching-funny-video-laughing-cartoon_1284-33366_qq1oed",
+              "created_at": "2022-02-05T02:37:46Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644028666/Uniform/Uniform%20Movie/group-people-watching-funny-video-laughing-cartoon_1284-33366_qq1oed.jpg",
+              "resource_type": "image",
+              "original_url": "http://res.cloudinary.com/seth-hall/image/upload/v1644028666/Uniform/Uniform%20Movie/group-people-watching-funny-video-laughing-cartoon_1284-33366_qq1oed.jpg",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/image/upload/v1644028666/Uniform/Uniform%20Movie/group-people-watching-funny-video-laughing-cartoon_1284-33366_qq1oed.jpg",
+              "raw_transformation": "f_auto/q_auto"
+            }
+          ]
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "6gk7tgKOd1Q75Ne43Qntn6",
+        "type": "Entry",
+        "createdAt": "2022-02-05T02:39:25.732Z",
+        "updatedAt": "2022-03-28T20:24:47.733Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2022-03-28T20:24:47.733Z",
+        "firstPublishedAt": "2022-02-05T02:42:14.620Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "A New Style of Romantic Comedy"
+        },
+        "featuredImage": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644028911/Uniform/Uniform%20Movie/1600321527-romcom-1600321527_tvo5bl.jpg",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 58335,
+              "width": 640,
+              "format": "jpg",
+              "height": 434,
+              "version": 1644028911,
+              "duration": null,
+              "metadata": [
+              ],
+              "public_id": "Uniform/Uniform Movie/1600321527-romcom-1600321527_tvo5bl",
+              "created_at": "2022-02-05T02:41:51Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644028911/Uniform/Uniform%20Movie/1600321527-romcom-1600321527_tvo5bl.jpg",
+              "resource_type": "image",
+              "original_url": "http://res.cloudinary.com/seth-hall/image/upload/v1644028911/Uniform/Uniform%20Movie/1600321527-romcom-1600321527_tvo5bl.jpg",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/image/upload/v1644028911/Uniform/Uniform%20Movie/1600321527-romcom-1600321527_tvo5bl.jpg",
+              "raw_transformation": "f_auto/q_auto"
+            }
+          ]
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "1vHQ2W5KgBbQFZazhcSmCL",
+        "type": "Entry",
+        "createdAt": "2022-02-05T02:42:27.127Z",
+        "updatedAt": "2022-03-28T20:24:24.484Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2022-03-28T20:24:24.484Z",
+        "firstPublishedAt": "2022-02-05T02:44:20.222Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Producer Strikes Box Office Gold!!"
+        },
+        "featuredImage": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644029022/Uniform/Uniform%20Movie/Box-Office-Weekend_ihifm0.png",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 407266,
+              "width": 500,
+              "format": "png",
+              "height": 368,
+              "version": 1644029022,
+              "duration": null,
+              "metadata": [
+              ],
+              "public_id": "Uniform/Uniform Movie/Box-Office-Weekend_ihifm0",
+              "created_at": "2022-02-05T02:43:42Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644029022/Uniform/Uniform%20Movie/Box-Office-Weekend_ihifm0.png",
+              "resource_type": "image",
+              "original_url": "http://res.cloudinary.com/seth-hall/image/upload/v1644029022/Uniform/Uniform%20Movie/Box-Office-Weekend_ihifm0.png",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/image/upload/v1644029022/Uniform/Uniform%20Movie/Box-Office-Weekend_ihifm0.png",
+              "raw_transformation": "f_auto/q_auto"
+            }
+          ]
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "4MyNFjfhxy2ErTBWlsBAN8",
+        "type": "Entry",
+        "createdAt": "2022-02-05T04:59:24.799Z",
+        "updatedAt": "2022-03-28T20:22:37.225Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-03-28T20:22:37.225Z",
+        "firstPublishedAt": "2022-02-05T05:02:23.633Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Our Top 5 Action Adventures!"
+        },
+        "featuredImage": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644037320/Uniform/Uniform%20Movie/WCCFbest2018actionadventure1_g43rck.jpg",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 225991,
+              "width": 740,
+              "format": "jpg",
+              "height": 429,
+              "version": 1644037320,
+              "duration": null,
+              "metadata": [
+              ],
+              "public_id": "Uniform/Uniform Movie/WCCFbest2018actionadventure1_g43rck",
+              "created_at": "2022-02-05T05:02:00Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644037320/Uniform/Uniform%20Movie/WCCFbest2018actionadventure1_g43rck.jpg",
+              "resource_type": "image",
+              "original_url": "http://res.cloudinary.com/seth-hall/image/upload/v1644037320/Uniform/Uniform%20Movie/WCCFbest2018actionadventure1_g43rck.jpg",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/image/upload/v1644037320/Uniform/Uniform%20Movie/WCCFbest2018actionadventure1_g43rck.jpg",
+              "raw_transformation": "f_auto/q_auto"
+            }
+          ]
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "1eswup8ZWiRargdQ1TDGJM",
+        "type": "Entry",
+        "createdAt": "2022-02-05T04:59:24.805Z",
+        "updatedAt": "2022-03-28T20:23:32.425Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2022-03-28T20:23:32.425Z",
+        "firstPublishedAt": "2022-02-05T05:01:23.564Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Director's Insight"
+        },
+        "featuredImage": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644037266/Uniform/Uniform%20Movie/AdobeStock_112096736_zsl8qd.jpg",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 90928,
+              "width": 900,
+              "format": "jpg",
+              "height": 600,
+              "version": 1644037266,
+              "duration": null,
+              "metadata": [
+              ],
+              "public_id": "Uniform/Uniform Movie/AdobeStock_112096736_zsl8qd",
+              "created_at": "2022-02-05T05:01:06Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644037266/Uniform/Uniform%20Movie/AdobeStock_112096736_zsl8qd.jpg",
+              "resource_type": "image",
+              "original_url": "http://res.cloudinary.com/seth-hall/image/upload/v1644037266/Uniform/Uniform%20Movie/AdobeStock_112096736_zsl8qd.jpg",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/image/upload/v1644037266/Uniform/Uniform%20Movie/AdobeStock_112096736_zsl8qd.jpg",
+              "raw_transformation": "f_auto/q_auto"
+            }
+          ]
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "id": "3AASWiWB5mUz41YGtV5T0D",
+        "type": "Entry",
+        "createdAt": "2022-02-05T04:59:24.829Z",
+        "updatedAt": "2022-03-28T20:23:59.455Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-03-28T20:23:59.455Z",
+        "firstPublishedAt": "2022-02-05T05:00:15.439Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "A New Style of Action Hero"
+        },
+        "featuredImage": {
+          "en-US": [
+            {
+              "url": "http://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644037194/Uniform/Uniform%20Movie/arnold-schwarzenegger-last-action-hero_mxtijr.jpg",
+              "tags": [
+              ],
+              "type": "upload",
+              "bytes": 24227,
+              "width": 440,
+              "format": "jpg",
+              "height": 283,
+              "version": 1644037194,
+              "duration": null,
+              "metadata": [
+              ],
+              "public_id": "Uniform/Uniform Movie/arnold-schwarzenegger-last-action-hero_mxtijr",
+              "created_at": "2022-02-05T04:59:54Z",
+              "secure_url": "https://res.cloudinary.com/seth-hall/image/upload/f_auto/q_auto/v1644037194/Uniform/Uniform%20Movie/arnold-schwarzenegger-last-action-hero_mxtijr.jpg",
+              "resource_type": "image",
+              "original_url": "http://res.cloudinary.com/seth-hall/image/upload/v1644037194/Uniform/Uniform%20Movie/arnold-schwarzenegger-last-action-hero_mxtijr.jpg",
+              "original_secure_url": "https://res.cloudinary.com/seth-hall/image/upload/v1644037194/Uniform/Uniform%20Movie/arnold-schwarzenegger-last-action-hero_mxtijr.jpg",
+              "raw_transformation": "f_auto/q_auto"
+            }
+          ]
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "7MTrUOiruPt6RVcI2ORrey",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "837fc8f5-8220-4f98-973e-3382349edc67"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "createdAt": "2022-02-01T19:06:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedAt": "2022-02-01T19:06:35Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "7MX354ksQyImlqtblTWsLo",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vyba6ssmqoqt"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "createdAt": "2022-02-01T19:06:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5LmUSEIBhjsmk1PyVHI9Kp"
+          }
+        },
+        "updatedAt": "2022-02-01T19:06:35Z"
+      }
+    }
+  ]
+}

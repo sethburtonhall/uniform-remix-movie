@@ -1,0 +1,15 @@
+id: featuredArticlesGroup
+name: Featured Articles Group
+icon: screen
+parameters: []
+slots:
+  - id: featuredArticlesGroupSlot
+    name: Featured Articles Group Slot
+    maxComponents: 3
+    allowedComponents:
+      - featuredArticle
+    inheritAllowedComponents: false
+titleParameter: ''
+canBeComposition: false
+created: '2022-03-31T18:49:26.609054+00:00'
+updated: '2022-03-31T18:49:26.609054+00:00'

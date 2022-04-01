@@ -1,0 +1,261 @@
+composition:
+  _id: 09aea777-4178-453c-a6a9-fa25f4511794
+  type: hero
+  _name: Movie of the Week Component
+  _slug: /
+  slots:
+    heroSlot:
+      - type: $personalization
+        slots:
+          pz:
+            - type: personalizedHero
+              parameters:
+                posterImage:
+                  type: cloudinary-parameter
+                  value:
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/v1648757200/Uniform/Uniform%20Movie/lists_scififilmsonhulu_ltvd8t.webp
+                      ratio: '16:9'
+                      width: 1440
+                      format: webp
+                      height: 900
+                      widths: 300,500
+                      caption: ''
+                      options: q_auto,f_auto
+                      version: 1648757200
+                      publicId: Uniform/Uniform Movie/lists_scififilmsonhulu_ltvd8t
+                      previewUrl: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/q_auto:low,f_auto,w_150/Uniform/Uniform%20Movie/lists_scififilmsonhulu_ltvd8t.webp
+                      resourceType: image
+                      transformation: ''
+                personalizedHero:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 40XPU64OW3jKvuPt09TIMM
+            - type: personalizedHero
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: action
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      action:
+                        str: 50
+                posterImage:
+                  type: cloudinary-parameter
+                  value:
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/v1643837423/Uniform/Uniform%20Movie/atomic-blonde-stairwell-fight_s0uc1x.webp
+                      ratio: '16:9'
+                      width: 1935
+                      format: webp
+                      height: 1088
+                      widths: 300,500
+                      caption: ''
+                      options: q_auto,f_auto
+                      version: 1643837423
+                      publicId: >-
+                        Uniform/Uniform
+                        Movie/atomic-blonde-stairwell-fight_s0uc1x
+                      previewUrl: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/q_auto:low,f_auto,w_150/Uniform/Uniform%20Movie/atomic-blonde-stairwell-fight_s0uc1x.webp
+                      resourceType: image
+                      transformation: ''
+                personalizedHero:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 5YC1G71B9xwDwrFKdleCYz
+            - type: personalizedHero
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: comedy
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      comedy:
+                        str: 50
+                posterImage:
+                  type: cloudinary-parameter
+                  value:
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/v1643836824/Uniform/Uniform%20Movie/great-indie-comedies_vwmrz8.jpg
+                      ratio: '16:9'
+                      width: 800
+                      format: jpg
+                      height: 427
+                      widths: 300,500
+                      caption: ''
+                      options: q_auto,f_auto
+                      version: 1643836824
+                      publicId: Uniform/Uniform Movie/great-indie-comedies_vwmrz8
+                      previewUrl: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/q_auto:low,f_auto,w_150/Uniform/Uniform%20Movie/great-indie-comedies_vwmrz8.jpg
+                      resourceType: image
+                      transformation: ''
+                personalizedHero:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 59NT0xmpfzbtOyJgFOscad
+        parameters:
+          matchFilter:
+            type: select
+            value: any
+          trackingEventName:
+            type: text
+            value: Movie of the Week Personalization
+    featuredArticlesGroupSlot:
+      - type: $personalization
+        slots:
+          pz:
+            - type: featuredArticle
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: action
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      action:
+                        str: 50
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 4MyNFjfhxy2ErTBWlsBAN8
+            - type: featuredArticle
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: action
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      action:
+                        str: 50
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 1eswup8ZWiRargdQ1TDGJM
+            - type: featuredArticle
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: action
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      action:
+                        str: 50
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 3AASWiWB5mUz41YGtV5T0D
+            - type: featuredArticle
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: comedy
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      comedy:
+                        str: 50
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 1vHQ2W5KgBbQFZazhcSmCL
+            - type: featuredArticle
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: comedy
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      comedy:
+                        str: 50
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 5JQe8dxpwnPRkLjNa7D7Fg
+            - type: featuredArticle
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: comedy
+                        r: 50
+                        op: '>'
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      comedy:
+                        str: 50
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 6gk7tgKOd1Q75Ne43Qntn6
+        parameters:
+          count:
+            type: text
+            value: '3'
+          matchFilter:
+            type: select
+            value: any
+          trackingEventName:
+            type: text
+            value: Featured Action Articles
+  parameters: {}
+created: '2022-03-31T18:49:28.411973+00:00'
+modified: '2022-03-31T20:35:49.807277+00:00'
+pattern: false

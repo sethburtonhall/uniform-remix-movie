@@ -20,13 +20,15 @@ import { enhancers } from '../../enhancers';
 
 type HeroSlots = 'heroSlot';
 
-type HeroType = {
-  fields: {
-    title: string;
-    description: string;
-    cloudinaryAsset: [{ url: string }];
+type HeroType = ComponentProps<{
+  personalizedHero: {
+    fields: {
+      title: string;
+      description: string;
+      cloudinaryAsset: [{ url: string }];
+    };
   };
-};
+}>;
 
 type CatchallData = {
   composition: RootComponentInstance;
@@ -74,9 +76,10 @@ export const loader: LoaderFunction = async ({
   }
 };
 
-function Hero({ personalizedHero }: { personalizedHero: HeroType }) {
+function Hero({ personalizedHero, component }: HeroType) {
   const cookies = new Cookies();
   const { genreId } = useLoaderData();
+  console.log('component', component);
 
   useEffect(() => {
     cookies.set('genreId', `${genreId}`, { path: '/' });
@@ -89,11 +92,7 @@ function Hero({ personalizedHero }: { personalizedHero: HeroType }) {
           <video
             className="rounded-md"
             controls
-            poster={
-              personalizedHero.fields.title === 'Action!'
-                ? 'https://res.cloudinary.com/seth-hall/image/upload/v1643837423/Uniform/Uniform%20Movie/atomic-blonde-stairwell-fight_s0uc1x.webp'
-                : 'https://res.cloudinary.com/seth-hall/image/upload/v1643836824/Uniform/Uniform%20Movie/great-indie-comedies_vwmrz8.jpg'
-            }
+            poster={component?.parameters?.posterImage?.value[0].url}
           >
             <source
               src={personalizedHero.fields.cloudinaryAsset[0].url}

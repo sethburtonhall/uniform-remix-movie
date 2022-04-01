@@ -1,8 +1,49 @@
 {
   "project": {
-    "pz": {},
-    "test": {
-      "Film of the Week Test": {}
-    }
+    "pz": {
+      "sig": {
+        "action": {
+          "str": 25,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "action"
+                },
+                "queryName": "utm_campaign"
+              }
+            ]
+          }
+        },
+        "comedy": {
+          "str": 25,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "comedy"
+                },
+                "queryName": "utm_campaign"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "test": {}
   }
 }

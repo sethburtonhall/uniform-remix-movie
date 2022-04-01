@@ -1,0 +1,18 @@
+id: movieOfTheWeek
+name: Movie of the Week
+icon: screen
+parameters:
+  - id: movieOfTheWeek
+    name: Movie of the Week
+    type: contentfulEntry
+    typeConfig:
+      source: default
+      allowedContentTypes:
+        film:
+          id: film
+          name: Film of the Week
+slots: []
+titleParameter: ''
+canBeComposition: false
+created: '2022-03-31T18:49:26.737978+00:00'
+updated: '2022-03-31T18:49:26.737978+00:00'
