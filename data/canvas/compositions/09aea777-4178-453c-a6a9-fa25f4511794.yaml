@@ -10,6 +10,16 @@ composition:
           pz:
             - type: personalizedHero
               parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: action
+                        r: 50
+                        op: <
+                      - l: comedy
+                        r: 50
+                        op: <
                 posterImage:
                   type: cloudinary-parameter
                   value:
@@ -257,5 +267,5 @@ composition:
             value: Featured Action Articles
   parameters: {}
 created: '2022-03-31T18:49:28.411973+00:00'
-modified: '2022-03-31T20:35:49.807277+00:00'
+modified: '2022-03-31T20:55:08.0902+00:00'
 pattern: false
