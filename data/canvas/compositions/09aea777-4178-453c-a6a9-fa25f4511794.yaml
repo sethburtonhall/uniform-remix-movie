@@ -16,42 +16,6 @@ composition:
                     crit:
                       - l: action
                         r: 50
-                        op: <
-                      - l: comedy
-                        r: 50
-                        op: <
-                posterImage:
-                  type: cloudinary-parameter
-                  value:
-                    - alt: ''
-                      url: >-
-                        https://res.cloudinary.com/seth-hall/image/upload/v1648757200/Uniform/Uniform%20Movie/lists_scififilmsonhulu_ltvd8t.webp
-                      ratio: '16:9'
-                      width: 1440
-                      format: webp
-                      height: 900
-                      widths: 300,500
-                      caption: ''
-                      options: q_auto,f_auto
-                      version: 1648757200
-                      publicId: Uniform/Uniform Movie/lists_scififilmsonhulu_ltvd8t
-                      previewUrl: >-
-                        https://res.cloudinary.com/seth-hall/image/upload/q_auto:low,f_auto,w_150/Uniform/Uniform%20Movie/lists_scififilmsonhulu_ltvd8t.webp
-                      resourceType: image
-                      transformation: ''
-                personalizedHero:
-                  type: contentfulEntry
-                  value:
-                    source: default
-                    entryId: 40XPU64OW3jKvuPt09TIMM
-            - type: personalizedHero
-              parameters:
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit:
-                      - l: action
-                        r: 50
                         op: '>'
                 intentTag:
                   type: intentTag
@@ -124,6 +88,35 @@ composition:
                   value:
                     source: default
                     entryId: 59NT0xmpfzbtOyJgFOscad
+            - type: personalizedHero
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value: null
+                posterImage:
+                  type: cloudinary-parameter
+                  value:
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/v1648757200/Uniform/Uniform%20Movie/lists_scififilmsonhulu_ltvd8t.webp
+                      ratio: '16:9'
+                      width: 1440
+                      format: webp
+                      height: 900
+                      widths: 300,500
+                      caption: ''
+                      options: q_auto,f_auto
+                      version: 1648757200
+                      publicId: Uniform/Uniform Movie/lists_scififilmsonhulu_ltvd8t
+                      previewUrl: >-
+                        https://res.cloudinary.com/seth-hall/image/upload/q_auto:low,f_auto,w_150/Uniform/Uniform%20Movie/lists_scififilmsonhulu_ltvd8t.webp
+                      resourceType: image
+                      transformation: ''
+                personalizedHero:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 40XPU64OW3jKvuPt09TIMM
         parameters:
           matchFilter:
             type: select
@@ -255,6 +248,27 @@ composition:
                   value:
                     source: default
                     entryId: 6gk7tgKOd1Q75Ne43Qntn6
+            - type: featuredArticle
+              parameters:
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 1y5ISkVf5Gi05IBz0CX0SZ
+            - type: featuredArticle
+              parameters:
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 5At29JRw1LqyWmRNj47uYZ
+            - type: featuredArticle
+              parameters:
+                featuredArticle:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 113E0eA8bBCwzXjPx9UEBo
         parameters:
           count:
             type: text
@@ -267,5 +281,5 @@ composition:
             value: Featured Action Articles
   parameters: {}
 created: '2022-03-31T18:49:28.411973+00:00'
-modified: '2022-03-31T20:55:08.0902+00:00'
+modified: '2022-05-03T13:53:51.080527+00:00'
 pattern: false
